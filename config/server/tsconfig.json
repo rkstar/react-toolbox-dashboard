@@ -1,0 +1,24 @@
+{
+  "compilerOptions": {
+    "target": "es6",
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "noResolve": false,
+    "noImplicitAny": false,
+    "removeComments": true,
+    "sourceMap": true,
+    "allowJs": true,
+    "rootDirs": [
+      "../../src/server",
+      "../../src/classes"
+    ]
+  },
+  "include": [
+    "../../src/server/**/*"
+  ],
+  "exclude": [
+    "../../node_modules/**/*"
+  ]
+}

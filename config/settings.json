@@ -1,0 +1,16 @@
+{
+  "public": {
+    "timezone": "America/New_York"
+  },
+  "jwt": {
+    "secret": "WIa0k4Ddj5526sy25X9pxPRAmxLGGll3Inq3mOxKmHMkNy6E86buqYOuI1PIpc4k"
+  },
+   "sparkpost": {
+    "api": {
+      "key": "b5e643f212130e908606a16dc1105ee9db7962ee"
+    }
+  },
+ "mongo": {
+    "url": "mongodb://johnny5:5YxQM98hNV8heN4c@cluster0-shard-00-00-fw4lp.mongodb.net:27017,cluster0-shard-00-01-fw4lp.mongodb.net:27017,cluster0-shard-00-02-fw4lp.mongodb.net:27017/admin?ssl=true&replicaSet=Cluster0-shard-0"
+  }
+}
