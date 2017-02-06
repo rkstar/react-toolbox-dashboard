@@ -1,9 +1,9 @@
 {
   "customProperties": {
-    "color-primary": "#DB0000",
-    "color-primary-dark": "#CB0000",
-    "color-accent": "#3B5998",
-    "color-accent-dark": "#4099FF"
+    "color-primary": "rgb(219,0,0)",
+    "color-primary-dark": "rgb(203,0,0)",
+    "color-accent": "rgb(64,153,255)",
+    "color-accent-dark": "rgb(3,155,229)"
   },
   "output": "src/client/stylesheets/react-toolbox"
 }
