@@ -4,6 +4,12 @@ import {Router, Route, IndexRoute, browserHistory} from 'react-router'
 import * as Layouts from './layouts'
 import {Dashboard, Login} from './views'
 
+import ThemeProvider from 'react-toolbox/lib/ThemeProvider'
+import * as theme from './stylesheets/react-toolbox/theme.js'
+import './stylesheets/react-toolbox/theme.css'
+import './stylesheets/main.css'
+
+
 class Troal extends React.Component<null, undefined>{
   render(){
     return (
@@ -19,4 +25,8 @@ class Troal extends React.Component<null, undefined>{
   }
 }
 
-render(<Troal />, document.getElementById('root'))
+render(
+  <ThemeProvider theme={theme}>
+    <Troal />
+  </ThemeProvider>,
+  document.getElementById('root'))

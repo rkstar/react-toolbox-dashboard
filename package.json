@@ -10,7 +10,7 @@
     "build:prod:client": "npm run clean:client && webpack --config config/client/webpack.prod.js",
     "clean:server": "rimraf dist/server/server.js* dist/server/*hot-update*",
     "clean:client": "rimraf dist/client/bundle.js*",
-    "dev:server": "nodemon dist/server/server.js",
+    "dev:server": "npm run toolbox && nodemon dist/server/server.js",
     "start": "npm run build:dev:client && npm run build:dev:server & npm run dev:server",
     "build": "npm run build:prod:client && npm run build:prod:server",
     "toolbox": "react-toolbox-themr --config config/client/react-toolbox-themr.json",
