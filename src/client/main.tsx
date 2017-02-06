@@ -4,10 +4,7 @@ import {Router, Route, IndexRoute, browserHistory} from 'react-router'
 import * as Layouts from './layouts'
 import {Dashboard, Login} from './views'
 
-import './stylesheets/react-toolbox/theme.css'
-import './stylesheets/main.css'
-
-import ThemeProvider from 'react-toolbox/lib/ThemeProvider'
+import {ThemeProvider} from 'react-css-themr'
 import * as theme from './stylesheets/react-toolbox/theme'
 
 class Troal extends React.Component<null, undefined>{

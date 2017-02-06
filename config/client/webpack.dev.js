@@ -47,12 +47,9 @@ module.exports = {
     }),
     new webpack.LoaderOptionsPlugin({
       debug: true,
-      minimize: true,
+      minimize: false,
       options: {
-        context: '/',
-        cssLoader: {
-          includePaths: dir.src
-        }
+        context: path.join(dir.src, '../')
       }
     })
   ],
@@ -72,6 +69,7 @@ module.exports = {
       exclude: /node_modules/
     },{
       test: /\.css$/,
+      include: [/node_modules/, dir.src],
       use: [{
         loader: 'style-loader'
       },{
@@ -80,21 +78,27 @@ module.exports = {
           modules: true,
           sourceMap: true,
           importLoaders: 1,
-          localIdentName: '[name]--[local]--[hash:base64:8]'
+          localIdentName: '[name]__[local]__[hash:base64:5]'
         }
       }, {
         loader: 'postcss-loader',
         options: {
           plugins: function(){
             return [
-              require('postcss-import')({addDependencyTo: webpack}),
+              require('postcss-import')({
+                // addDependencyTo: webpack,
+                // root: path.join(dir.src, '../'),
+                // path: dir.src
+              }),
+              // require('postcss-mixins')(),
+              // require('postcss-each')(),
               require('postcss-cssnext')({ browsers: ['> 1%', 'last 4 versions']}),
               require('postcss-reporter')({ clearMessages: true })
             ]
           }
         }
       }]
-		},{
+    },{
       test: /\.html$/,
       use: ['file-loader', 'html-loader', 'url-loader'],
       exclude: /node_modules/
