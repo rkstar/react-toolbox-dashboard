@@ -88,10 +88,8 @@ module.exports = {
           plugins: function(){
             return [
               require('postcss-import')({addDependencyTo: webpack}),
-              require('postcss-url')(),
-              require('postcss-cssnext')({browsers: ['> 1%', 'last 4 versions']}),
-              require('postcss-browser-reporter')(),
-              require('postcss-reporter')()
+              require('postcss-cssnext')({ browsers: ['> 1%', 'last 4 versions']}),
+              require('postcss-reporter')({ clearMessages: true })
             ]
           }
         }

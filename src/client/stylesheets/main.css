@@ -1,4 +1,4 @@
-@import './brand-colors.css';
+@import './config.css';
 @import './defaults/main.css';
 @import './tablet/main.css' (min-width: 960px);
 @import './desktop/main.css' (min-width: 1280px);

@@ -1,6 +1,11 @@
 import * as React from 'react'
 import {Layout, NavDrawer, Panel} from 'react-toolbox/lib/layout'
-import AppBar from 'react-toolbox/lib/app_bar'
+import AppBar from 'react-toolbox/lib/app_bar/AppBar'
+import Button from 'react-toolbox/lib/button/Button'
+
+import * as theme from '../stylesheets/react-toolbox/theme'
+import ThemeProvider from 'react-toolbox/lib/ThemeProvider'
+
 
 export default class Dashboard extends React.Component<any, any>{
   constructor(props){
@@ -20,20 +25,24 @@ export default class Dashboard extends React.Component<any, any>{
 
   render(){
     return (
-      <Layout>
-        <NavDrawer
-          active={this.state.drawerOpen}
-          onOverlayClick={this.toggleDrawer}>
-          <p>
-            Navigation, account switcher, etc. go here.
-          </p>
-        </NavDrawer>
-        <Panel>
-          <AppBar
-            leftIcon='menu'
-            onLeftIconClick={this.toggleDrawer} />
-        </Panel>
-      </Layout>
+      <ThemeProvider theme={theme}>
+        <Layout>
+          <NavDrawer
+            active={this.state.drawerOpen}
+            onOverlayClick={this.toggleDrawer}>
+            <p>
+              Navigation, account switcher, etc. go here.
+            </p>
+          </NavDrawer>
+          <Panel>
+            <AppBar
+              leftIcon='menu'
+              onLeftIconClick={this.toggleDrawer} />
+
+            <Button label='click me' accent raised />
+          </Panel>
+        </Layout>
+      </ThemeProvider>
     )
   }
 }
