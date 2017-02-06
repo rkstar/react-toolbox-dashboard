@@ -19,17 +19,17 @@
   --dark-grey: rgb(48, 48, 48);
   --white: rgb(255, 255, 255);
 
-  --google-red: #db5a3c;
-  --facebook-blue: #3B5998;
-  --twitter-blue: #4099FF;
-  --linkedin-blue: #338AB0;
+  --google-red: rgb(219,90,60);
+  --facebook-blue: rgb(59,89,152);
+  --twitter-blue: rgb(64,153,255);
+  --linkedin-blue: rgb(51,138,176);
 
-  --pink: #e91e63;
-  --blue: #2979ff;
-  --link-blue: #039be5;
+  --pink: rgb(233,30,99);
+  --blue: rgb(41,121,255);
+  --link-blue: rgb(3,155,229);
 
-  --red1: #CB0000;
-  --brand-primary: #DB0000;
+  --red1: rgb(203,0,0);
+  --brand-primary: rgb(219,0,0);
 
   /**
    * theme override colors
