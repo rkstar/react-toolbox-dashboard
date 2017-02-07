@@ -5,7 +5,7 @@ import * as Layouts from './layouts'
 import {Dashboard, Login} from './views'
 
 import {ThemeProvider} from 'react-css-themr'
-import * as theme from './stylesheets/react-toolbox/theme'
+const theme :any = require('./stylesheets/react-toolbox/theme.js')
 
 class Troal extends React.Component<null, undefined>{
   render(){
