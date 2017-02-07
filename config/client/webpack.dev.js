@@ -78,20 +78,14 @@ module.exports = {
           modules: true,
           sourceMap: true,
           importLoaders: 1,
-          localIdentName: '[name]__[local]__[hash:base64:5]'
+          localIdentName: '[local]' // if this has a hash applied, we won't be able to use our classnames defined
         }
       }, {
         loader: 'postcss-loader',
         options: {
           plugins: function(){
             return [
-              require('postcss-import')({
-                // addDependencyTo: webpack,
-                // root: path.join(dir.src, '../'),
-                // path: dir.src
-              }),
-              // require('postcss-mixins')(),
-              // require('postcss-each')(),
+              require('postcss-import')(),
               require('postcss-cssnext')({ browsers: ['> 1%', 'last 4 versions']}),
               require('postcss-reporter')({ clearMessages: true })
             ]

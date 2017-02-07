@@ -1,7 +1,7 @@
 import * as React from 'react'
 import {Layout, NavDrawer, Panel} from 'react-toolbox/lib/layout'
 import AppBar from 'react-toolbox/lib/app_bar/AppBar.js'
-import {Button} from 'react-toolbox/lib/button/Button'
+import Button from 'react-toolbox/lib/button/Button'
 
 export default class Dashboard extends React.Component<any, any>{
   constructor(props){
