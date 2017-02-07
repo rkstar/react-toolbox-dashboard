@@ -5,5 +5,6 @@
     "color-accent": "rgb(64,153,255)",
     "color-accent-dark": "rgb(3,155,229)"
   },
-  "output": "src/client/stylesheets/react-toolbox"
+  "output": "src/client/stylesheets/react-toolbox",
+  "fixed": true
 }

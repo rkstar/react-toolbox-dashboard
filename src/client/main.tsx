@@ -4,8 +4,8 @@ import {Router, Route, IndexRoute, browserHistory} from 'react-router'
 import * as Layouts from './layouts'
 import {Dashboard, Login} from './views'
 
-import {ThemeProvider} from 'react-css-themr'
-const theme :any = require('./stylesheets/react-toolbox/theme.js')
+import ThemeProvider from 'react-toolbox/lib/ThemeProvider.js'
+const contextTheme :any = require('./stylesheets/react-toolbox/theme.js')
 
 class Troal extends React.Component<null, undefined>{
   render(){
@@ -23,7 +23,7 @@ class Troal extends React.Component<null, undefined>{
 }
 
 render(
-  <ThemeProvider theme={theme}>
+  <ThemeProvider theme={contextTheme}>
     <Troal />
   </ThemeProvider>,
   document.getElementById('root'))
